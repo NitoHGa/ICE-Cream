@@ -1,38 +1,40 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
-    background: #F1F0E8;
+    background: #ffffff;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-header{
+header{ /*z -> 4 */
     height: 80px;
     width: 100%;
-    background: #F1F0E8;
+    background: #ffffff;
     position: fixed;
     display: flex;
     align-content: center;
+    align-items: center;
     justify-content: space-between;
+    box-shadow: 0px 5px 5px #bbbab9;
     z-index: 4;
 }
-
 .content-logo{
     display: flex;
-    align-items: center;
-    justify-items: center;
-    margin: 10px 80px;
+    margin-left: 5vw;
 }
 .content-logo a{
     color: black;
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 2.3em;
     font-family: 'Gluten', cursive;
 }
 .content-logo img{
     height: 60px;
     width: auto;
-    margin: 10px 10px;
+    margin: 0px 1vw;
     transform: rotate(-25deg);
 }
 .content-logo picture{
@@ -43,19 +45,16 @@ header{
 	transition: 0.7s;
 }
 .content-nav{
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    margin: 10px 50px;
+    margin: 0 3vw;
 }
 .content-nav li{
     display: inline-block;
-    margin: 0 2px;
+    margin: 0 0.2vw;
     transition-duration: 0.2s;
 }
 .content-nav a{
     color: black;
-    margin: 0 10px;
+    margin: 0 0.5vw;
     font-size: 1.3em;
     font-family: 'Gudea', sans-serif;
     font-weight: 100;
@@ -63,42 +62,43 @@ header{
 }
 .content-nav li:hover{
     background: #f5b4b6;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     font-weight: 600;
 }
-main{
+main{ /*z->3 */
     top: 80px;
-    background: #F1F0E8;
     height: 100vh;
     width: 100%;
     z-index: 3;
     display: flex;
     align-content: center;
     justify-content: center;
-    z-index: 1;
 }
 .container-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 40%;
     height: auto;
-    margin: 0 100px;
+    margin: 0 8vw;
 }
 .container-text h2{
     font-size: 5em;
     font-family: Georgia;
-    margin: 5px 0px;
+    margin: 0;
 }
 .container-text p{
     font-size: 1.2em;
-    font-family: Georgia;
-    margin: 5px 0px;
+    font-family: 'Yomogi', cursive;
+    font-weight: 600;
+}
+.container-text span{
+    color: #E8A0BF;
 }
 .container-img{
     width: 45%;
     height: auto;
-    margin: 0 50px;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,7 +107,6 @@ main{
     background-repeat: no-repeat;
     background-size: 160%;
     background-position: -160px;
-    z-index: 3;
 }
 .container-social{
     display: flex;
@@ -115,11 +114,10 @@ main{
     justify-content: center;
     width: 5%;
     height: auto;
-    z-index: 2;
 }
 .container-social img{
-    height: 35px;
-    margin: 10px 0px;
+    height: 2.2rem;
+    margin: 1vh 0;
 }
 .container-social img{
     transition-duration: 1s;   
@@ -141,6 +139,7 @@ main{
 .thumb li img{
     height: 100px;
 }
+
 .thumb li{
     list-style: none;
     display: inline-block;
@@ -153,4 +152,53 @@ main{
     transform: translateY(-0.5em);
 	transition: 0.5s;
     cursor: pointer;
+    
+}
+.section-us{
+    height: calc(100vh - 70px);
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.section-us-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 25px;
+}
+.section-us-img img{
+    height: 450px;
+    margin: 25px;
+}
+.section-us-txt{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 25px;
+}
+.section-us-txt p{
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Yomogi', cursive;
+}
+.section-us-txt a{
+    color: #000;
+    background: #E8A0BF;
+    padding: 5px;
+    border-radius: 10px;
+    box-sizing: content-box;
+    width: max-content;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-family: 'Yomogi', cursive;
+}
+.section-us-txt h2{
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium';
+    margin: 0;
 }
